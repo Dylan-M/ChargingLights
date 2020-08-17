@@ -16,4 +16,4 @@
 #define forwardPin 4
 #define reversePin 3
 
-#define interval   500
+#define interval   250
