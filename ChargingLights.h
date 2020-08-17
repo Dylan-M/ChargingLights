@@ -7,13 +7,13 @@
  * Pin definitions header file
  */
 
-#define LOW_LED    2
-#define LEDsA      2
-#define LEDsB      3
-#define LEDsC      4
-#define NUM_LEDS   5
+#define LOW_LED    0
+#define LEDsA      0
+#define LEDsB      1
+#define LEDsC      2
+#define NUM_LEDS   3
 
-#define forwardPin 13
-#define reversePin 12
+#define forwardPin 4
+#define reversePin 3
 
 #define interval   500
