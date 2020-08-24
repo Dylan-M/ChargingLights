@@ -18,19 +18,27 @@ void setup() {
     digitalWrite(i, LOW);
   }
 
-  pinMode(forwardPin, INPUT_PULLUP);
-  pinMode(reversePin, INPUT_PULLUP);
+  digitalWrite(TRUCK_LIGHTS, LOW);
+
+  pinMode(movementPin, INPUT_PULLUP);
+  pinMode(trucksPin, INPUT_PULLUP);
 }
 
 void loop() {
   unsigned long currentMillis = millis();
   if ((currentMillis - prevMillis) >= interval) {
-    if (digitalRead(reversePin) == LOW) {
+    if (digitalRead(movementPin) == LOW) {
       lights(true);
     } else {
       lights(false);
     }
     prevMillis = currentMillis;
+  }
+
+  if (digitalRead(trucksPin) == LOW) {
+    digitalWrite(TRUCK_LIGHTS, HIGH);
+  } else {
+    digitalWrite(TRUCK_LIGHTS, LOW);
   }
 }
 
